@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect Nonna Titti</title>
+
+  <!-- Redirect automatico (inizialmente verso YouTube placeholder) -->
+  <meta http-equiv="refresh" content="0; url=https://www.youtube.com">
+
+  <!-- Opzione JS per redirect dinamico via JSON -->
+  <script>
+    // Se vuoi cambiare destinazione più facilmente, puoi leggere da file JSON o editare qui
+    let redirectUrl = "https://www.youtube.com"; // cambia qui ogni volta
+    window.location.href = redirectUrl;
+  </script>
+</head>
+<body>
+  <p>Se non vieni reindirizzato automaticamente, <a id="link" href="https://www.youtube.com">clicca qui</a>.</p>
+</body>
+</html>
