@@ -3,18 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirect Nonna Titti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Redirect automatico (inizialmente verso YouTube placeholder) -->
-  <meta http-equiv="refresh" content="0; url=https://it.nothing.tech/">
-
-  <!-- Opzione JS per redirect dinamico via JSON -->
+  <!-- Redirect dinamico via JavaScript -->
   <script>
-    // Se vuoi cambiare destinazione più facilmente, puoi leggere da file JSON o editare qui
-    let redirectUrl = "https://it.nothing.tech/"; // cambia qui ogni volta
-    window.location.href = redirectUrl;
+    // URL di destinazione: modifica questo file (o leggi da redirect.txt via fetch se vuoi)
+    const redirectUrl = "https://www.reddit.com/r/hockeyplayers/comments/1qiev3/can_someone_explain_the_different_types_of_shots/?tl=it"; // cambia qui ogni volta
+
+    // Evita cache aggiungendo un timestamp opzionale
+    const url = redirectUrl + "?t=" + new Date().getTime();
+
+    // Reindirizzamento automatico
+    window.location.href = url;
   </script>
+
+  <style>
+    /* Stile minimalista per l’utente */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #fff;
+      color: #333;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <p>Se non vieni reindirizzato automaticamente, <a id="link" href="https://it.nothing.tech/">clicca qui</a>.</p>
+  <h1>Redirect Nonna Titti</h1>
+  <p>Se non vieni reindirizzato automaticamente, <a id="link" href="https://www.reddit.com/r/hockeyplayers/comments/1qiev3/can_someone_explain_the_different_types_of_shots/?tl=it">clicca qui</a>.</p>
+  <p>Puoi sempre scansionare di nuovo il QR code per aggiornare la destinazione.</p>
 </body>
 </html>
